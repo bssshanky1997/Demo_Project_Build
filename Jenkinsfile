@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile Java') {
+        stage('Build Docker Image') {
             steps {
-                bat 'javac Main.java'
+                bat 'docker build -t demo-java-app .'
             }
         }
 
-        stage('Run Java') {
+        stage('Run Docker Container') {
             steps {
-                bat 'java Main'
+                bat 'docker run --rm demo-java-app'
             }
         }
     }
