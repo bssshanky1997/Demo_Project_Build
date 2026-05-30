@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Compile Java') {
             steps {
-                bat 'javac main.java'
+                bat 'javac Main.java'
             }
         }
 
