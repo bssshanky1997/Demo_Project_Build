@@ -1,6 +1,8 @@
 public class Main {
-    public static void main(String[] args) {
-        System.out.print("Hello ");
-        System.out.print("World");
+    public static void main(String[] args) throws Exception {
+        while (true) {
+            System.out.println("Application Running...");
+            Thread.sleep(10000);
+        }
     }
 }
